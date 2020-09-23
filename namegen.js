@@ -2,6 +2,11 @@
 var fs = require('fs');
 
 var args = process.argv.slice(2);
+if (args.length != 4) {
+    console.log("Usage:")
+    console.log("node namegen.js <maximum syllables> <minimum syllables> <number of names> <syllables source file>")
+    process.exit()
+}
 console.log('Function arguments: ', args);
 
 var maxSyllables = args[0]
